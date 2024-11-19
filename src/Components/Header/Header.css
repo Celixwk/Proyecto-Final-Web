@@ -1,0 +1,69 @@
+.header-container {
+  background: linear-gradient(to right, #2e7d32, #388e3c);
+  padding: 1.5rem;
+  color: white;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  position: relative; /* Añadido para posicionar los botones */
+}
+
+.header-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+}
+
+.header-subtitle {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+
+.header-button { /* Clase común para ambos botones */
+  border: 2px solid rgba(255,255,255,0.8);
+  color: white;
+  font-weight: 500;
+  padding: 0.5rem 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.header-button:hover {
+  background: rgba(66, 45, 45, 0.1);
+  border-color: white;
+}
+
+@media (max-width: 1024px) {
+  .header-title {
+    font-size: 2rem;
+  }
+  
+  .header-subtitle {
+    font-size: 1rem;
+  }
+  
+  .header-button {
+    padding: 0.4rem 1.2rem;
+    font-size: inherit; /* Mantiene el tamaño de fuente */
+  }
+}
+
+@media (max-width: 440px) {
+  .header-title {
+    font-size: 1.5rem;
+  }
+  
+  .header-subtitle {
+    font-size: 0.9rem;
+  }
+  
+  .header-container {
+    padding: 1rem;
+  }
+  
+  .header-button {
+    padding: 0.3rem 1rem;
+    font-size: inherit; /* Mantiene el tamaño de fuente */
+    margin-left: auto; /* Alinea automáticamente los botones */
+    margin-right: auto; /* Alinea automáticamente los botones */
+    display: inline-block; /* Asegura que se comporten como bloques en línea */
+}}

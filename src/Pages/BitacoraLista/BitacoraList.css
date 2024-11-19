@@ -1,0 +1,115 @@
+/* src/Pages/BitacoraList/BitacoraList.css */
+:root {
+  --primary-color: #4CAF50;
+  --secondary-color: #388E3C;
+  --background-color: #F0F3F4;
+  --card-background-color: #FFFFFF;
+  --text-color: #333333;
+  --input-border-color: #CCCCCC;
+  --input-focus-border-color: var(--primary-color);
+  --shadow-color: rgba(0, 0, 0, 0.1);
+}
+
+.bitacora-list {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem; /* Relleno del contenedor */
+  background-color: var(--background-color); /* Color de fondo */
+}
+
+/* Filtros */
+.filters {
+  display: flex;
+  flex-wrap: wrap; /* Permite que los filtros se ajusten en varias líneas */
+  gap: 1rem; /* Espacio entre filtros */
+  padding: 1.5rem; /* Relleno interno de los filtros */
+  background-color: var(--card-background-color); /* Color de fondo de los filtros */
+  border-radius: 12px; /* Bordes redondeados */
+}
+
+.filters input,
+.filters select {
+    padding: .75rem; /* Relleno interno de campos de filtro */
+    border: 1px solid var(--input-border-color); /* Borde del campo */
+    border-radius: 8px; /* Bordes redondeados */
+    font-size: 1rem; /* Tamaño de fuente */
+    width: auto; /* Ancho automático para campos de filtro */
+    min-width: 150px; /* Ancho mínimo para campos de filtro */
+    flex-grow: 1; /* Permite que los campos crezcan para llenar el espacio disponible */
+}
+
+.filters button {
+    padding:.75rem1.5rem; /* Relleno interno del botón */
+    background-color: var(--primary-color); /* Color de fondo del botón */
+    color:#FFFFFF; /* Color del texto del botón */
+    border:none; 
+    border-radius:8px; 
+    cursor:pointer; 
+}
+
+/* Bitácoras */
+.bitacora-items {
+    display:flex; 
+    flex-direction:column;
+    gap:.5rem;
+}
+
+.bitacora-item {
+    padding:1.5rem;
+    background-color :var(--card-background-color);
+    border-radius:12px; /* Bordes redondeados en las tarjetas */
+    box-shadow:0px2px6px var(--shadow-color); /* Sombra sutil en las tarjetas */
+    cursor:pointer;
+    transition:transform .2s ease, box-shadow .2s ease;
+}
+
+.bitacora-item:hover {
+   transform :scale(1.02);
+   box-shadow:0px,4px,12px rgba(0,0,0,.2); /* Sombra más intensa al pasar el mouse */
+}
+
+.bitacora-title {
+   font-size:1.5em;
+   color :var(--secondary-color);
+   margin-bottom:.5rem; 
+   font-weight:bold; 
+}
+
+.bitacora-location,
+.bitacora-habitat,
+.bitacora-climate {
+   color : var(--text-color);
+   font-size:.9em; 
+   margin:.5rem0; 
+}
+
+/* Estilos responsivos para tablets (máximo ancho:1024px) */ 
+@media (max-width1024px) { 
+	.bitacora-list {padding:1.5rem;} 
+	
+	.filters {flex-direction:column;gap:1rem;padding:1rem;}
+	
+	.filters input,
+	.filters select {width:100%;} 
+	
+	.bitacora-items {gap:1rem;} 
+	
+	.bitacora-item {padding:1rem;}
+}
+
+/* Ajustes para celulares (máximo ancho440px)*/ 
+@media (max-width440px) { 
+	.bitacora-list {padding:1rem;} 
+	
+	.filters {flex-direction:column;gap:75rem;padding:5rem;} 
+	
+	.bitacora-items {gap:5rem;} 
+	
+	.bitacora-item {padding:75rem;font-size:85rem;} 
+	
+	.bitacora-title {font-size:12rem;} 
+	
+	.bitacora-location,
+	.bitacora-habitat,
+	.bitacora-climate {font-size:8rem;}
+}

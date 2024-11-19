@@ -1,0 +1,198 @@
+/* Estilos principales de la barra de navegación */
+.navbar {
+  background: linear-gradient(135deg, #2ecc71, #27ae60);
+  padding: 0.8rem 2rem;
+  box-shadow: 0 4px 15px rgba(46, 204, 113, 0.2);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.navbar::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(to right, 
+    transparent, 
+    rgba(255, 255, 255, 0.5), 
+    transparent
+  );
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  padding: 0;
+  margin: 0;
+  position: relative;
+}
+
+.navbar ul li {
+  position: relative;
+}
+
+.navbar ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 500;
+  padding: 0.8rem 1.5rem;
+  border-radius: 25px;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  letter-spacing: 0.5px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Efecto hover decorativo */
+.navbar ul li a::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateX(-100%) rotate(45deg);
+  transition: transform 0.6s ease;
+}
+
+.navbar ul li a:hover::before {
+  transform: translateX(100%) rotate(45deg);
+}
+
+.navbar ul li a:hover {
+  background: rgba(255, 255, 255, 0.15);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Efecto activo */
+.navbar ul li a.active {
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Decoración con iconos */
+.navbar ul li a svg {
+  transition: transform 0.3s ease;
+}
+
+.navbar ul li a:hover svg {
+  transform: rotate(15deg) scale(1.1);
+}
+
+/* Efecto de subrayado en hover */
+.navbar ul li a::after {
+  content: '';
+  position: absolute;
+  bottom: 0.5rem;
+  left: 1.5rem;
+  right: 1.5rem;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.5);
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.navbar ul li a:hover::after {
+  transform: scaleX(1);
+}
+
+/* Animación de brillo en hover */
+@keyframes shimmer {
+  0% {
+    background-position: -100% 0;
+  }
+  100% {
+    background-position: 100% 0;
+  }
+}
+
+.navbar ul li a:hover {
+  background-image: linear-gradient(
+    120deg,
+    transparent 0%,
+    transparent 25%,
+    rgba(255, 255, 255, 0.1) 50%,
+    transparent 75%,
+    transparent 100%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 2s infinite;
+}
+
+/* Responsivo para tablets (1024px y menores) */
+@media (max-width: 1024px) {
+  .navbar {
+    padding: 0.6rem 1rem;
+  }
+
+  .navbar ul {
+    gap: 1rem;
+  }
+
+  .navbar ul li a {
+    font-size: 1rem;
+    padding: 0.6rem 1.2rem;
+  }
+}
+
+/* Responsivo para celulares (440px y menores) */
+@media (max-width: 440px) {
+  .navbar {
+    padding: 0.5rem;
+  }
+
+  .navbar ul {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .navbar ul li {
+    width: 100%;
+  }
+
+  .navbar ul li a {
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+    justify-content: center;
+  }
+
+  /* Ajustes para efectos en móvil */
+  .navbar ul li a::after {
+    bottom: 0.3rem;
+    left: 1rem;
+    right: 1rem;
+  }
+}
+
+/* Efectos de entrada para los elementos del menú */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.navbar ul li {
+  animation: slideIn 0.3s ease forwards;
+}
+
+.navbar ul li:nth-child(1) { animation-delay: 0.1s; }
+.navbar ul li:nth-child(2) { animation-delay: 0.2s; }
+.navbar ul li:nth-child(3) { animation-delay: 0.3s; }

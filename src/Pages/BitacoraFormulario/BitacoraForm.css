@@ -1,0 +1,112 @@
+/* src/Pages/BitacoraForm/BitacoraForm.css */
+
+:root {
+    --primary-color: #4CAF50;
+    --secondary-color: #388E3C;
+    --background-color: #F0F3F4;
+    --card-background-color: #FFFFFF;
+    --text-color: #333333;
+    --input-border-color: #CCCCCC;
+    --input-focus-border-color: var(--primary-color);
+    --shadow-color: rgba(0, 0, 0, 0.1);
+  }
+  
+  .bitacora-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem; /* Espacio entre los campos del formulario */
+    max-width: 500px; /* Ancho máximo del formulario */
+    margin: 2rem auto; /* Centra el formulario */
+    padding: 2rem; /* Relleno interno */
+    background-color: var(--card-background-color); /* Color de fondo */
+    border-radius: 12px; /* Bordes redondeados */
+    box-shadow: 0 4px 20px var(--shadow-color); /* Sombra del formulario */
+  }
+  
+  .form-title {
+    font-size: 2rem; /* Tamaño de fuente del título */
+    color: var(--primary-color); /* Color del título */
+    text-align: center; /* Alineación centrada del título */
+  }
+  
+  .form-field {
+    display: flex;
+    flex-direction: column; /* Organiza los elementos en columna */
+  }
+  
+  .form-label {
+    font-size: 1rem; /* Tamaño de fuente de la etiqueta */
+    color: var(--text-color); /* Color del texto de la etiqueta */
+  }
+  
+  .form-input {
+    padding: 0.8rem; /* Relleno interno del campo */
+    border: 1px solid var(--input-border-color); /* Borde del campo */
+    border-radius: 8px; /* Bordes redondeados */
+    font-size: 1rem; /* Tamaño de fuente dentro del campo */
+    background-color: #fff; /* Color de fondo del campo */
+  }
+  
+  .form-input:focus {
+    border-color: var(--input-focus-border-color); /* Color del borde al enfocar */
+    outline: none; /* Elimina el contorno predeterminado */
+  }
+  
+  .button-container {
+      display: flex;
+      justify-content: space-between; /* Espacio entre botones en la fila */
+      margin-top: 1.5rem; /* Margen superior entre campos y botones */
+  }
+  
+  button {
+      flex-grow: 1; /* Los botones ocupan el mismo espacio disponible */
+      padding: .8rem; /* Relleno interno de los botones */
+      font-size: .9rem; /* Tamaño de fuente en los botones */
+      font-weight: bold; /* Peso de fuente en los botones */
+      border-radius: 8px; /* Bordes redondeados en los botones */
+      transition: background-color .3s ease, transform .2s ease;
+  }
+  
+  button:first-child {
+      background-color: #f3f3f3; /* Color para el botón "Cancelar" */
+      color: var(--text-color);
+  }
+  
+  button:first-child:hover {
+     background-color:#e0e0e0; /* Hover para el botón "Cancelar" */
+  }
+  
+  button:last-child {
+     background-color: var(--primary-color); /* Color para el botón "Guardar" */
+     color:#fff;
+  }
+  
+  button:last-child:hover {
+     background-color:#45a049; /* Hover para el botón "Guardar" */
+  }
+  
+  /* Responsividad para dispositivos más pequeños (768px y menores) */
+  @media (max-width:768px) {
+      .bitacora-form {
+          padding:1.5rem;
+          max-width:90%; 
+      }
+  
+      .form-input,
+      button {
+          font-size:.9rem;
+      }
+  }
+  
+  /* Responsividad para móviles (440px y menores) */
+  @media (max-width:440px) {
+      .bitacora-form {
+          padding:.8rem;
+          max-width:100%; 
+      }
+  
+      .form-input,
+      button {
+          font-size:.85rem;
+      }
+  }

@@ -1,0 +1,124 @@
+/* src/Pages/HomePage/HomePage.css */
+
+/* Estilos generales para la página de inicio */
+.home-section {
+  
+  background-size: cover; /* Cubre todo el contenedor */
+  background-position: center; /* Centra la imagen de fondo */
+  background-attachment: fixed; /* Fija la imagen al desplazarse */
+ 
+  padding: 60px 20px; /* Relleno interno */
+  background-color: #7dd983;
+}
+
+.home-content {
+  max-width: 800px; /* Ancho máximo del contenido */
+  margin: auto; /* Centra el contenido */
+  background: rgba(0, 0, 0, 0.5); /* Fondo semitransparente para mejorar legibilidad */
+  padding: 30px; /* Relleno interno del contenido */
+  border-radius: 10px; /* Bordes redondeados */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Sombra del contenido */
+}
+
+.home-welcome {
+  font-size: 2.8em; /* Tamaño de fuente del saludo */
+  color: #aed581; /* Color del saludo */
+  margin-bottom: 20px; /* Margen inferior del saludo */
+  text-align: center; /* Alineación centrada del saludo */
+}
+
+.home-description {
+  font-size: 1.4em; /* Tamaño de fuente de la descripción */
+  color: #e0e0e0; /* Color de la descripción */
+  line-height: 1.6; /* Altura de línea para mejor legibilidad */
+  text-align: center; /* Alineación centrada de la descripción */
+}
+
+.home-features,
+.home-instructions {
+  margin-top: 30px; /* Margen superior para las secciones de características e instrucciones */
+}
+
+.home-features h2,
+.home-instructions h2 {
+  font-size: 1.8em; /* Tamaño de fuente para los títulos de características e instrucciones */
+  color: #ffcc80; /* Color de los títulos */
+  margin-bottom: 15px; /* Margen inferior de los títulos */
+}
+
+.home-features ul {
+  list-style-type: square; /* Tipo de lista cuadrada */
+  padding-left: 20px; /* Relleno izquierdo para la lista */
+  color: #c8e6c9; /* Color del texto en la lista */
+  font-size: 1.1em; /* Tamaño de fuente en la lista */
+}
+
+.home-features li {
+    margin-bottom:10px; /* Margen inferior entre los elementos de la lista */
+}
+
+.home-instructions p {
+    font-size:1.2em; /* Tamaño de fuente para las instrucciones */
+    color:#e0e0e0; /* Color del texto en las instrucciones */
+}
+
+/* Estilos (tablets) */
+@media (max-width: 1024px) {
+    .home-section {
+        padding:40px15px;
+        background-attachment: scroll; /* Mejora el rendimiento en móviles al quitar el fondo fijo */
+    }
+
+    .home-content {
+        padding:20px;
+        box-shadow:none; /* Simplifica el diseño en dispositivos más pequeños */
+    }
+
+    .home-welcome {
+        font-size:2em;
+    }
+
+    .home-description {
+        font-size:1.2em;
+        text-align: justify; /* Mejor lectura en pantallas pequeñas al justificar el texto */
+    }
+
+    .home-features h2,
+    .home-instructions h2 {
+        font-size:1.5em;
+    }
+
+    .home-features ul {
+        padding-left:15px;
+        font-size:1em;
+    }
+}
+
+/* Estilos (teléfonos) */
+@media (max-width: 440px) {
+    .home-section {
+        padding:30px,10px;
+    }
+
+    .home-welcome {
+        font-size:1.8em;
+    }
+
+    .home-description {
+        font-size:1em;
+    }
+
+    .home-features h2,
+    .home-instructions h2 {
+        font-size:1.3em;
+    }
+
+    .home-features ul {
+        padding-left:10px;
+    }
+
+    .home-content {
+        background: rgba(0,0,0,.7); /* Más contraste en pantallas pequeñas para mejorar legibilidad */
+        padding:15px;
+    }
+}

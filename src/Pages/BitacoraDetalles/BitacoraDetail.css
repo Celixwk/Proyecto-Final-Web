@@ -1,0 +1,154 @@
+/* Estilos base - Desktop */
+.bitacora-detail {
+  padding: 2.5rem;
+  background: #fdfdfd;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  max-width: 800px;
+  margin: 2rem auto;
+  font-family: 'Arial', sans-serif;
+  color: #333;
+  line-height: 1.6;
+}
+
+.detail-title {
+  font-size: 2.2rem;
+  color: #2e7d32;
+  margin-bottom: 1.5rem;
+  font-weight: bold;
+  border-bottom: 2px solid #e0e0e0;
+  padding-bottom: 0.5rem;
+}
+
+.detail-date,
+.detail-location,
+.detail-climate {
+  font-size: 1.1rem;
+  color: #666;
+  margin-bottom: 1rem;
+}
+
+.detail-description {
+  font-size: 1.2rem;
+  color: #424242;
+  background-color: #f1f8e9;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+  border-left: 4px solid #2e7d32; /* Borde izquierdo destacado */
+}
+
+.button-container {
+  display: flex;
+  justify-content: space-between; /* Espacio entre botones */
+  margin-top: 2rem; /* Espacio superior */
+}
+
+.back-button,
+.delete-button,
+.edit-button {
+  padding: 0.9rem 1.6rem; /* Relleno interno */
+  font-size: 1rem; /* Tamaño de fuente */
+  font-weight:500; /* Peso de fuente */
+  
+ /* Estilos comunes para botones */
+ border-radius:8px; 
+ cursor:pointer; 
+ transition: background-color .3s ease, transform .2s ease; 
+ box-shadow:0px4px12px rgba(0,0,0,.1); 
+ flex:1; 
+ margin-right:.5rem; 
+ text-align:center; 
+}
+
+.back-button {
+    background-color:#66bb6a; 
+    color:#fff; 
+}
+
+.back-button:hover,
+.back-button:focus {
+    background-color:#43a047; 
+    transform:translateY(-2px); 
+    outline:none; 
+}
+
+.delete-button {
+    background-color:#e53935; 
+    color:#fff; 
+    margin-right:.5rem; 
+}
+
+.delete-button:hover,
+.delete-button:focus {
+    background-color:#c62828; 
+    transform:translateY(-2px); 
+    outline:none; 
+}
+
+.export-pdf-button,
+.add-note-button {
+    position:relative; 
+    padding:.8rem1.4rem; 
+    font-size:1rem; 
+    font-weight:500; 
+    background-color:#4caf50; 
+    color:#fff; 
+    border:none; 
+    border-radius:8px; 
+    cursor:pointer; 
+    transition:.3s ease;background-color : .3s ease, transform .2s ease; box-shadow:
+  	0px4px12px rgba(0,0,0,.1); margin:.5rem;}
+    
+.add-note-button:hover {
+	background-color:#388e3c;
+	transform:translateY(-2px);
+}
+
+/* Estilos para tablet - Ancho máximo de 1024px */
+@media (max-width:1024px) {
+	.bitacora-detail {
+		padding:2rem;
+		margin:.5rem auto;
+		max-width: 90%;
+	}
+	
+	.detail-title {
+		font-size : 1.8rem;}
+		
+	.detail-description {
+		font-size :1rem; padding:.8rem;}
+		
+	.button-container {
+		flex-direction : column;
+		align-items:center;}
+		
+	.back-button,
+	.delete-button,
+	.edit-button {
+		flex:unset;width : 100%;
+		margin:.5rem0;}
+		
+	.export-pdf-button,
+	.add-note-button {
+		width:100%;
+		text-align:center;}
+}
+
+/* Estilos para móviles - Ancho máximo de440px */
+@media (max-width440px) {
+	.bitacora-detail {
+		padding :1.5rem; font-size:.9rem;}
+		
+	.detail-title {font-size:1.5rem;}
+	
+	.detail-description {font-size:.9rem;padding:.5rem;}
+	
+	.button-container {flex-direction:column;gap:.5rem;}
+	
+	.back-button,
+	.delete-button,
+	.edit-button,
+	.export-pdf-button,
+	.add-note-button {padding:.7rem1rem;font-size:.9rem;}
+}
